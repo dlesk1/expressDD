@@ -1,18 +1,29 @@
 {
-  "name": "express",
+  "name": "express2",
   "version": "0.0.0",
   "private": true,
   "scripts": {
-    "start": "node ./bin/www",
-    "dev": "npm nodemon ./bin/www"
+    "start": "node -r dotenv/config ./bin/www",
+    "dev": "npx nodemon -r dotenv/config ./bin/www",
+    "tw": "npx tailwindcss -i ./public/stylesheets/input.css -o ./public/stylesheets/style.css --watch"
   },
   "dependencies": {
-    "cookie-parser": "~1.4.6",
-    "debug": "~4.3.4",
-    "ejs": "^3.1.9",
+    "bcrypt": "^5.1.1",
+    "better-sqlite3": "^9.2.2",
+    "cookie-parser": "~1.4.4",
+    "debug": "~2.6.9",
+    "dotenv": "^16.3.1",
     "express": "^4.18.2",
-    "http-errors": "~2.0.0",
-    "morgan": "~1.10.0",
-    "nodemon": "^3.0.1"
+    "express-handlebars": "^7.1.2",
+    "http-errors": "~1.6.3",
+    "joi": "^17.11.0",
+    "jsonwebtoken": "^9.0.2",
+    "morgan": "~1.9.1"
+  },
+  "devDependencies": {
+    "@tailwindcss/forms": "^0.5.7",
+    "daisyui": "^4.4.4",
+    "nodemon": "^3.0.1",
+    "tailwindcss": "^3.3.5"
   }
 }
