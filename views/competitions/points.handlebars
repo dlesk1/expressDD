@@ -1,0 +1,28 @@
+<div class="overflow-x-auto">
+    <table class="table">
+        <thead>
+            <tr>
+                <th>ID prijave</th>
+                <th>Natjecanje</th>
+                <th>Kada je prijavljen</th>
+                <th>Broj bodova</th>
+                <th>Unos bodova</th>
+            </tr>
+        </thead>
+        <tbody>
+            {{#each result.items}}
+            <tr>
+                <th>{{this.id}}</th>
+                <td>{{this.natjecatelj}}</td>
+                <td x-data="{}">
+                    <span x-text="new Data('{{this.applied_at}}').toLocaleString()"></span>
+                </td>
+                <td>{{this.score}}</th>
+                <td>{{this.natjecanja}}</td>
+                <td class="flex flex-wrap gap-2">
+                </td>
+            </tr>
+            {{/each}}
+        </tbody>
+    </table>
+</div>
